@@ -1,42 +1,48 @@
-import { useState } from "react";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-export default function App() {
-  const [name, setName] = useState("");
-  const [response, setResponse] = useState("");
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setResponse(`Hola ${name}, gracias por contarme sobre ti ✨`);
-  };
+// Páginas reales según tu estructura
+import Home from "./pages/Home";
+import Conferencias from "./pages/Conferencias";
+import Coaching from "./pages/Coaching";
+import Productos from "./pages/Productos";
+import Retiros from "./pages/Retiros";
+import Terapias from "./pages/Terapias";
+import TherapiesPage from "./pages/TherapiesPage";
+import ServicesPage from "./pages/ServicesPage";
+import Reservations from "./pages/Reservations";
+import Contact from "./components/Contact";
 
+function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
-      <div className="bg-white shadow-lg rounded-xl p-8 max-w-md w-full">
-        <h1 className="text-3xl font-bold text-center mb-6">Háblame de ti</h1>
+    <Router>
+      <Navbar />
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <input
-            type="text"
-            placeholder="Escribe tu nombre..."
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
-          />
+      <Routes>
+        <Route path="/" element={<Home />} />
 
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
-          >
-            Enviar
-          </button>
-        </form>
+        {/* Servicios principales */}
+        <Route path="/terapias" element={<Terapias />} />
+        <Route path="/conferencias" element={<Conferencias />} />
+        <Route path="/retiros" element={<Retiros />} />
+        <Route path="/productos" element={<Productos />} />
 
-        {response && (
-          <p className="mt-6 text-center text-lg font-medium text-gray-700">
-            {response}
-          </p>
-        )}
-      </div>
-    </div>
+        {/* Página general de servicios */}
+        <Route path="/servicios" element={<ServicesPage />} />
+
+        {/* Página detallada de terapias */}
+        <Route path="/terapias-detalle" element={<TherapiesPage />} />
+
+        <Route path="/reservaciones" element={<Reservations />} />
+        <Route path="/contacto" element={<Contact />} />
+      </Routes>
+
+      <Footer />
+    </Router>
   );
 }
+
+export default App;

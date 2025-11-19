@@ -1,3 +1,11 @@
+/* -----------------------------------------------------
+   Fuentes de Google (deben ir primero)
+----------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+/* -----------------------------------------------------
+   Estilos base del proyecto
+----------------------------------------------------- */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -11,13 +19,18 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* -----------------------------------------------------
+   Animación del logo
+----------------------------------------------------- */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -33,6 +46,9 @@
   }
 }
 
+/* -----------------------------------------------------
+   Tarjetas, texto, etc.
+----------------------------------------------------- */
 .card {
   padding: 2em;
 }
