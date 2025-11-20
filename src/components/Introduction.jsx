@@ -9,15 +9,14 @@ function Introduction() {
 
       <p className="text-lg text-brand-700 leading-relaxed">
         Es un espacio que integra psicología moderna, espiritualidad
-        consciente y relajación emocional para ayudarte a reconectar contigo mismo.
-        Buscamos sanar desde la raíz, acompañarte en tus procesos personales e
+        consciente y relajación emocional para ayudarte a reconectar contigo mismo,
+        buscamos sanar desde la raíz, acompañarte en tus procesos personales e
         inspirarte a vivir con más calma, propósito y autenticidad.
 
 
         Háblame de Ti, nace con la misión de acompañar a las personas en su
         camino interno, permitiendo que su alma también pueda escucharse.
-        Liderado por Tatiana Zapata, este proyecto integra psicología,
-        espiritualidad y arte terapéutico.
+        
       </p>
     </div>
   );

@@ -14,7 +14,7 @@ export default function Hero({ openModal }) {
 
       <div className="relative max-w-6xl mx-auto text-center">
         <h1 className="text-5xl md:text-6xl font-extrabold text-purple-700">
-          El alma también necesita escucharse.  
+          El alma también necesita escucharse
         </h1>
 
         <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mt-4">
@@ -28,7 +28,7 @@ export default function Hero({ openModal }) {
             className="px-8 py-3 bg-purple-600 text-white font-semibold rounded-full shadow-lg hover:bg-purple-700 transition"
           >
             Reservar ahora
-          </button>
+          </button> 
 
           <a
             href="#servicios"
